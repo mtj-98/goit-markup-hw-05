@@ -539,14 +539,14 @@ body {
   color: var(--primary-button-color);
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color var(--transition-dur-and-fun), color var(--transition-dur-and-fun),
-    box-shadow var(--transition-dur-and-fun);
 }
 
 .button-filter {
   background-color: var(--primary-button-filter-bg);
   color: var(--primary-button-bg);
   border: 1px solid #e7e9fc;
+  transition: background-color var(--transition-dur-and-fun), color var(--transition-dur-and-fun),
+  box-shadow var(--transition-dur-and-fun), border var(--transition-dur-and-fun); 
 }
 
 .button-filter:hover,
@@ -713,7 +713,7 @@ body {
   background: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
-  transition: background-color var(--transition-dur-and-fun);
+  transition: background-color var(--transition-dur-and-fun), border var(--transition-dur-and-fun);
 }
 
 .modal-close-btn:hover,
