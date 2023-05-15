@@ -133,6 +133,7 @@ body {
 
 /* ===============HEADER - Navigation end contacts=============== */
 .menu-link {
+  position: relative;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -152,14 +153,14 @@ body {
 }
 
 .stick::after {
-  content: '';
   position: absolute;
+  content: '';
   width: 100%;
   height: 4px;
   left: 0;
-  bottom: -25px;
-  border-radius: 4px;
   background-color: #404bbf;
+  bottom: -1px;
+  border-radius: 2px;
 }
 
 .page-header-container {
@@ -199,6 +200,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color var(--transition-dur-and-fun);
 }
 
 .contacts:hover,
@@ -431,7 +433,7 @@ body {
   height: 88px;
   border: 1px solid var(--icom-primary-color);
   border-radius: 4px;
-  transition: color var(--transition-dur-and-fun), border-color var(--transition-dur-and-fun);
+  transition: border-color var(--transition-dur-and-fun), color var(--transition-dur-and-fun);
 }
 
 .customers-list-link:hover,
@@ -537,14 +539,14 @@ body {
   color: var(--primary-button-color);
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color var(--transition-dur-and-fun), color var(--transition-dur-and-fun),
+    box-shadow var(--transition-dur-and-fun);
 }
 
 .button-filter {
   background-color: var(--primary-button-filter-bg);
   color: var(--primary-button-bg);
   border: 1px solid #e7e9fc;
-  transition: background-color var(--transition-dur-and-fun), color var(--transition-dur-and-fun),
-    box-shadow var(--transition-dur-and-fun);
 }
 
 .button-filter:hover,
@@ -690,11 +692,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 576px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform var(--transition-dur-and-fun);
 }
 
 .modal-close-btn {
@@ -710,6 +713,18 @@ body {
   background: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
+  transition: background-color var(--transition-dur-and-fun);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--batton-hover-bg);
+  border: none;
+  fill: #ffffff;
+}
+
+.modal-close-btn-icon {
+  transition: fill var(--transition-dur-and-fun);
 }
 
 /* ==================/MODAL WINDOW==================== */
